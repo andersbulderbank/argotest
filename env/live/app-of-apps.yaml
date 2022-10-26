@@ -11,8 +11,10 @@ spec:
   project: default
   source:
     repoURL: https://github.com/andersbulderbank/argotest.git
-    valueFiles:
-      - app-of-apps.yaml
+    path: env/live/
+    helm:
+      valueFiles:
+        - app-of-apps.yaml
     targetRevision: HEAD
   syncPolicy:
     automated:
